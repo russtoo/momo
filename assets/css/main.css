@@ -16,7 +16,7 @@
 /* Colors */
 :root {
   --color-default: #212529;
-  --color-primary: orangered;
+  --color-primary: rgba(255, 0, 0, 0.781);
   --color-secondary: #37373f;
 }
 
@@ -410,6 +410,10 @@ section {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about {
+  padding: 2em;
+}
+
 .about .about-img {
   min-height: 500px;
 }
