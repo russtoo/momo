@@ -11,8 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove();
+      document.body.style.overflow = 'auto';
     });
   }
+  document.body.style.overflow = 'hidden';
 
   /**
    * Sticky header on scroll
