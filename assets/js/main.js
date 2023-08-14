@@ -4,6 +4,33 @@
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
+
+  /**
+   * swiper
+   */
+  var swiper = new Swiper(".swiper-container", {
+    pagination: ".swiper-pagination",
+    slidesPerView: "auto",
+    paginationClickable: true,
+    spaceBetween: 0
+  });
+
+  /**
+   * Read more
+   */
+  const expandButton = document.querySelector(".expand-button");
+  const specialText = document.querySelector(".special-text");
+
+  expandButton.addEventListener("click", function () {
+    specialText.classList.toggle("-expanded");
+
+    if (specialText.classList.contains("-expanded")) {
+      expandButton.innerHTML = "Read Less";
+    } else {
+      expandButton.innerHTML = "Read More";
+    }
+  });
+
   /**
    * Preloader
    */

@@ -423,6 +423,7 @@ section {
   font-size: 36px;
   margin-bottom: 30px;
   font-family: var(--font-secondary);
+  text-align: center;
 }
 
 .about .call-us {
@@ -536,6 +537,87 @@ section {
   border-left: 15px solid var(--color-primary);
   transform: scale(20);
 }
+
+.about-img img {
+  max-width: 23em;
+}
+
+.about-img {
+  background-size: cover;
+  background-position: center;
+}
+
+.expand-button {
+  cursor: pointer;
+  display: block;
+  width: 50%;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+.expand-button:hover,
+.expand-button:active,
+.expand-button:focus {
+  background-color: #ffffff;
+}
+
+.special-text {
+  position: relative;
+  max-height: 240px;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.special-text.-expanded {
+  max-height: 120vh;
+}
+
+.special-text:not(.-expanded)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0), white);
+
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  padding-left: initial;
+  margin: 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: 90%;
+  height: 300px;
+  border-right: 20px solid rgb(255, 255, 255);
+  background-size: cover;
+  background-position: center;
+  list-style-type: none;
+}
+
+/*     .swiper-slide:nth-child(2n) {
+        width: 60%;
+    }
+    .swiper-slide:nth-child(3n) {
+        width: 40%;
+    } */
 
 @keyframes pulsate-btn {
   0% {
@@ -760,39 +842,39 @@ section {
 # Events Section
 --------------------------------------------------------------*/
 .events {
-  padding: 0;
+  padding: 20px;
 }
 
 .events .container-fluid {
-  padding: 0;
+  padding: 40px;
 }
 
 .events .event-item {
   background-size: cover;
-  background-position: cente;
-  min-height: 600px;
+  background-position: center;
+  min-height: 200px;
   padding: 30px;
 }
 
 @media (max-width: 575px) {
   .events .event-item {
-    min-height: 500px;
+    min-height: 200px;
   }
 }
 
 .events .event-item:before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   inset: 0;
 }
 
-.events .event-item h3 {
+.events .event-item h4 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 5px;
   color: #fff;
   position: relative;
+  text-align: center;
 }
 
 .events .event-item .price {
@@ -818,114 +900,8 @@ section {
   }
 }
 
-.events .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
 
-.events .swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: #d1d1d7;
-  opacity: 1;
-}
 
-.events .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
-}
-
-/*--------------------------------------------------------------
-# Chefs Section
---------------------------------------------------------------*/
-.chefs .chef-member {
-  overflow: hidden;
-  text-align: center;
-  border-radius: 5px;
-  background: #fff;
-  box-shadow: 0px 0 30px rgba(55, 55, 63, 0.08);
-  transition: 0.3s;
-}
-
-.chefs .chef-member .member-img {
-  position: relative;
-  overflow: hidden;
-}
-
-.chefs .chef-member .member-img:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  background: url(../img/team-shape.svg) no-repeat center bottom;
-  background-size: contain;
-  z-index: 1;
-}
-
-.chefs .chef-member .social {
-  position: absolute;
-  right: -100%;
-  top: 30px;
-  opacity: 0;
-  border-radius: 4px;
-  transition: 0.5s;
-  background: rgba(255, 255, 255, 0.3);
-  z-index: 2;
-}
-
-.chefs .chef-member .social a {
-  transition: color 0.3s;
-  color: rgba(55, 55, 63, 0.4);
-  margin: 15px 12px;
-  display: block;
-  line-height: 0;
-  text-align: center;
-}
-
-.chefs .chef-member .social a:hover {
-  color: rgba(55, 55, 63, 0.9);
-}
-
-.chefs .chef-member .social i {
-  font-size: 18px;
-}
-
-.chefs .chef-member .member-info {
-  padding: 10px 15px 20px 15px;
-}
-
-.chefs .chef-member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
-  color: var(--color-secondary);
-}
-
-.chefs .chef-member .member-info span {
-  display: block;
-  font-size: 14px;
-  font-weight: 400;
-  color: rgba(33, 37, 41, 0.4);
-}
-
-.chefs .chef-member .member-info p {
-  font-style: italic;
-  font-size: 14px;
-  padding-top: 15px;
-  line-height: 26px;
-  color: rgba(33, 37, 41, 0.7);
-}
-
-.chefs .chef-member:hover {
-  transform: scale(1.08);
-  box-shadow: 0px 0 30px rgba(55, 55, 63, 0.15);
-}
-
-.chefs .chef-member:hover .social {
-  right: 8px;
-  opacity: 1;
-}
 
 /*--------------------------------------------------------------
 # Book A Table Section
@@ -1136,7 +1112,7 @@ section {
 }
 
 .contact {
-  background-image: url("assets/img/image00025.jpeg");
+  background-image: url("assets/about/image00025.jpeg");
   width: 100%;
   height: 100%;
   background-size: cover;
