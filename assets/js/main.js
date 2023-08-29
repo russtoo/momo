@@ -15,21 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 0
   });
 
-  /**
-   * Read more
-   */
-  const expandButton = document.querySelector(".expand-button");
-  const specialText = document.querySelector(".special-text");
-
-  expandButton.addEventListener("click", function () {
-    specialText.classList.toggle("-expanded");
-
-    if (specialText.classList.contains("-expanded")) {
-      expandButton.innerHTML = "Read Less";
-    } else {
-      expandButton.innerHTML = "Read More";
-    }
-  });
+ 
 
   /**
    * Preloader

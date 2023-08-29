@@ -413,7 +413,13 @@ section {
 # About Section
 --------------------------------------------------------------*/
 .about {
-  padding: 2em;
+  padding: 2em 15em;
+}
+
+@media (max-width: 500px) {
+  .about {
+    padding: 1em 2em;
+  }
 }
 
 .about div {
@@ -422,11 +428,11 @@ section {
 }
 
 .about p {
-  padding: 0;
+  padding-top: 1em;
 }
 
 .about .about-img {
-  min-height: 500px;
+  min-height: 700px;
 }
 
 .about h4 {
@@ -439,62 +445,8 @@ section {
 }
 
 
-.about-img img {
-  max-width: 20em;
-}
-
-.about-img {
-  background-size: cover;
-  background-position: center;
-}
-
-.expand-button {
-  cursor: pointer;
-  display: block;
-  width: 50%;
-  margin-top: 0.4rem;
-  margin-bottom: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgb(255, 255, 255);
-  color: #f05656;
-  font-weight: 400;
-  font-size: 0.9rem;
-  padding: 0.5rem;
-  border: none;
-}
-
-.expand-button:hover,
-.expand-button:active,
-.expand-button:focus {
-  background-color: #ffffff;
-}
-
-.special-text {
-  position: relative;
-  max-height: 200px;
-  overflow: hidden;
-  transition: max-height 1s ease;
-  text-align: center;
-  padding: 0;
-}
-
-.special-text.-expanded {
-  max-height: 120vh;
-}
-
-.special-text:not(.-expanded)::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(rgba(255, 255, 255, 0), white);
-}
-
 .swiper-container {
-  width: 100%;
+  width: 90%;
   height: 100%;
 }
 
@@ -506,30 +458,29 @@ section {
 .swiper-slide {
   font-size: 18px;
   background: #fff;
-  width: 100%;
-  height: 300px;
   border-right: 20px solid rgb(255, 255, 255);
+  width: 100%;
   background-size: cover;
   background-position: center;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 600px;
 }
 
-/*     .swiper-slide:nth-child(2n) {
-        width: 60%;
-    }
-    .swiper-slide:nth-child(3n) {
-        width: 40%;
-    } */
-
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
+@media (max-width: 900px) {
+  .swiper-slide {
+    height: 300px;
   }
 }
 
